@@ -1,5 +1,8 @@
 from ipaddress import ip_address
 import socket
+import time
+
+start_time = time.time()
 
 ip_address = input("Enter IP address: ")
 lower_port = int(input("Enter lower port: "))
@@ -13,3 +16,5 @@ for port in range(lower_port, upper_port + 1):
         print("Port " + str(port) + " is open")
     else:
         print("Port " + str(port) + " is closed")
+
+print("Time taken", time.time() - start_time, "seconds")
